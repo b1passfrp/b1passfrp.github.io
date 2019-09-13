@@ -38,26 +38,6 @@
 		grid-template-rows: repeat(3, [row] auto  );
 	}
 
-.btndarkmode {
-  padding: 15px 25px;
-  font-size: 5px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #3dcc74;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px #cfcfcf;
-}
-
-.btndarkmode:hover {background-color: #3dcc74}
-
-.btndarkmode:active {
-  background-color: #3d49cc;
-  box-shadow: 0 2px #e0e0e0;
-  transform: translateY(4px);
-}
 	
 </style>
 <meta charset="utf-8">
@@ -91,10 +71,9 @@
 <div class="hr"></div>
 <div class="content-block" style="max-width:414px; margin: 15px; margin-left: -15px;">
 
-<p onclick="toggleTheme()"><button class="btndarkmode">ON/OFF</button></p>
+<button id="toggleTheme" class="button" onclick="toggleTheme()">Dark Theme</button>
+<!--<p onclick="toggleTheme()"><button class="btndarkmode">ON/OFF</button></p>-->
 <!--<p onclick="toggleTheme()"><button type="button">Dark Mode</button></p>-->
-
-<p>DARK MODE</p>
 <div class="content-block"><h2 class="date" id="demo"></h2>
 
 <div class="app-card-3"  onclick="location.href='cydia://url/https://cydia.saurik.com/api/share#?source=https://irepo.xyz'"></br>
