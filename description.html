@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html><head>
+<title>Description</title>
+<!--<link rel='stylesheet' type='text/css' href='ios7.css'/>-->
+<meta name='viewport' content='width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;'/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>*{margin:0;padding:0;border:0;outline:0;box-sizing:border-box}html{background:#efeff4}body{font:14px -apple-system-font,".Helvetica NeueUI","Helvetica Neue",sans-serif;margin:0px 0 35px 0;cursor:default;-webkit-user-select:none}h2,body>p{margin:15px;color:#6d6d72;font-size:14px;font-weight:400}h2 a,body>p a{color:inherit}h2{text-transform:uppercase;margin-bottom:5px}body>p{margin-top:-25px}a,button{color:#007aff;text-decoration:none}header{position:fixed;top:0;left:0;width:100%;height:44px;z-index:10;background:#f7f7f7;border-bottom:1px solid #c9c9cd}header h1{text-align:center;font-size:18px;line-height:44px;font-weight:500}ul{margin:5px 0 35px 0;list-style:none;background:#fff}ul:before,ul:after{content:"";display:block;height:1px;background:#c8c7cc}ul li{border-bottom:1px solid #c8c7cc;margin-left:15px}ul li:last-child{border-bottom:0}ul li>p,ul li>a,ul li>button{padding:13px 15px;margin-left:-15px}ul li>p+p,ul li>p+a,ul li>p+button,ul li>a+p,ul li>a+a,ul li>a+button,ul li>button+p,ul li>button+a,ul li>button+button{padding-top:0}ul li>a,ul li>button{display:block;color:#007aff;padding-right:30px;position:relative;z-index:2}ul li>a:after,ul li>button:after{content:"";display:block;background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NSIgaGVpZ2h0PSI5OSI+PHBvbHlnb24gcG9pbnRzPSIzNC43LDQ5LjcgMCw4NC40IDE1LjEsOTkuNSA2NC44LDQ5LjcgNDkuNywzNC43IDE1LjEsMCAwLDE1LjEiIHN0eWxlPSJmaWxsOiNjN2M3Y2MiLz48L3N2Zz4=");position:absolute;top:50%;right:15px;width:10px;height:13px;margin-top:-6.5px;background-size:100% 100%}ul li>button{font:inherit;width:100%;text-align:left}ul+p{margin-top:-25px}.cydia body{margin-top:35px}.cydia header{display:none}.cydia header+p{margin-top:-20px}.depiction{background:transparent}.depiction body{margin-top:0;margin-bottom:0}img.icon{height:auto;margin:-7px 6px -9px -8px;max-height:29px;min-width:29px;width:29px}
+</style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="description.js?_=4654654"></script>
+<body onload="loadPackageInfo()">
+<span id="showAddRepo_" hidden><h2><strong>Repo Test</strong></h2><ul><li><a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Cydia_logo.png"/><label>Mở trong Cydia</label></a></li></ul></span>
+<p style="text-align:center;" id="showAddRepoUrl_" hidden><em><strong>Repo test</strong> </em><br><strong> Repo Test : https://abc.com</strong></p>
+<span id="tweakStatusInfo"><h2></h2><ul style="background:#c6e8ff"><center><li><p id="errorInfo">Đang tải...</p></li></center></ul></span>
+<span id="desc_short_" hidden><h2 id="name" hidden></h2><ul style="background:#c6e8ff"><center><li><p id="desc_short"></p></li></center></ul></span>
+<span id="compatitle_" hidden><ul style="background:#00ff24"><center><li><p><i>Tương thích với <span id="compatitle"></span></i></p></li></center></ul></span>
+<p style="text-align:center;font-size:10px;" id="compatitle_"><span id="your_ios" hidden></span></p>
+<span id="warning_" hidden><ul style="background:#ffff80"><center><li><p><span id="warning"></span></p></li></center></ul></span>
+<span id="desc_long_" hidden><h2><strong>Mô tả</strong></h2><ul><li><p id="desc_long"></p></li></ul></span>
+<span id="screenshot_" hidden><h2><strong>Hình ảnh</strong></h2><ul><li><p id="screenshot"></p></li></ul></span>
+<span id="changelog_" hidden><h2><strong>Các thay đổi</strong></h2><ul><li><p id="changelog"></p></li></ul></span>
+
+
+<h2><strong>Liên hệ</strong></h2>
+<ul>
+	<li>
+		<a href="https://www.facebook.com/" target="_blank">
+			<img class="icon" src="http://files.softicons.com/download/social-media-icons/ios-7-style-social-media-icons-by-design-bolts/png/256x256/Facebook.png"/>
+			<label>Facebook</label>
+		</a>
+	</li>
+	<li>
+		<a href="https://twitter.com/" target="_blank">
+			<img class="icon" src="https://www.onebitetechnology.ca/wp-content/uploads/2019/01/twitter-logo-transparent-300x300.png"/>
+			<label>Twitter</label>
+		</a>
+	</li>
+	<li>
+		<a href="mailto:abc@gmail.com"" target="_blank">
+			<img class="icon" src="https://purepng.com/public/uploads/large/purepng.com-mail-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596075clftr.png"/>
+			<label>Email</label>
+		</a>
+	</li>
+</ul>
+<p style="text-align:center;"><strong>Repo Test</strong></p>
+
+</body>
+<script>
+	function iOSVersion() {
+	var match = (navigator.appVersion).split('OS ');
+	if (match.length > 1) {
+		return match[1].split(' ')[0].split('_').join('.');
+	}
+	return false;
+}
+function loadPackageInfo() {
+	if (navigator.userAgent.search(/Cydia/) == -1) {
+		$("#showAddRepo_").show();
+		$("#showAddRepoUrl_").show();
+	}
+	var urlSelfParts = window.location.href.split('description.html?id=');
+	var form_url = urlSelfParts[0]+"packageInfo/"+urlSelfParts[1];
+	$.ajax({
+		url: form_url,
+		type: "GET",
+		cache: false,
+		crossDomain: true,
+		success: function (returnhtml) {
+			$("#tweakStatusInfo").hide();
+			var decodeResp = eval('('+returnhtml+')');
+			if(decodeResp.name) {
+				document.title = decodeResp.name;
+				$("#name").html(decodeResp.name);
+				$("#name").show();
+			}
+			if(decodeResp.desc_short) {
+				$("#desc_short").html(decodeResp.desc_short);
+				$("#desc_short_").show();
+			}
+			if(decodeResp.warning) {
+				$("#warning").html(decodeResp.warning);
+				$("#warning_").show();
+			}
+			if(decodeResp.desc_long) {
+				$("#desc_long").html(decodeResp.desc_long);
+				$("#desc_long_").show();
+			}
+			if(decodeResp.compatitle) {
+				$("#compatitle").html(decodeResp.compatitle);
+				$("#compatitle_").show();
+				var ios_ver = iOSVersion();
+				if(ios_ver) {
+					$("#your_ios").show();
+					$("#your_ios").html("iOS hiện tại : "+ios_ver);
+				}
+			}
+			if(decodeResp.changelog) {
+				$("#changelog").html(decodeResp.changelog);
+				$("#changelog_").show();
+			}
+			if(decodeResp.screenshot) {
+				$("#screenshot").html(decodeResp.screenshot);
+				$("#screenshot_").show();
+			}
+        },
+		error: function (err) {
+			$("#errorInfo").html("Description unavailable for "+urlSelfParts[1]);
+		}
+	});
+}
+</script>
+</html>
