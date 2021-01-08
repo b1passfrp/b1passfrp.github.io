@@ -1,2 +1,2 @@
-# b1passfrp.cf
+# b1passfrp.github.io
 bypass_google FRP
